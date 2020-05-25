@@ -1,0 +1,22 @@
+@import "tablet";
+
+p {
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: justify;
+}
+
+img {
+    &.w3-image {
+        max-width: 50%;
+    }
+}
+
+@media #{$tablet} {
+    img {
+        &.w3-image {
+            max-width:100%;
+        }
+    }
+}
+

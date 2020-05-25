@@ -1,0 +1,34 @@
+---
+layout: common.hbs
+styling: home.css
+title: Cinzia Milani classical guitar master from Italy
+---
+
+<div class="volume">
+    <div class="volume__note w3-panel w3-pale-yellow">
+        <span onclick="this.parentElement.style.opacity=0" class="w3-button w3-large w3-display-right">×</span>
+        <p></p>
+    </div>
+    <button class="volume__button w3-btn w3-text-red" disabled title="unmute">
+        <i class="fas fa-volume-mute"></i>
+    </button>
+</div>
+
+<div id="loader" class="w3-panel w3-center">
+    <img title="loading...please wait." alt="loading...please wait." src="img/loading.gif">
+    <p>loading...</p>
+</div>
+
+<header class="w3-panel w3-center w3-opacity" style="width:400px;margin:auto;">
+    <object id="signature" type="image/svg+xml" data="svg/signature.svg">
+        <h1>Cinzia Milani</h1>
+    </object>
+</header>
+
+
+<!-- Photo Grid -->
+<div class="photo-grid w3-sepia-min">
+</div>
+<!-- End Page Content -->
+
+

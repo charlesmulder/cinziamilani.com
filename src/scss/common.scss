@@ -1,0 +1,32 @@
+@import "menu";
+
+html {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Raleway";
+    margin:0;
+    line-height:0.5;
+    font-size: 44px;
+}
+
+header {
+    button {
+        cursor: pointer;
+    }
+
+    &> h1 {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+}
+
+main.w3-content {
+    margin-top:75px;
+}
+
+.cm-margin-top {
+    margin: 0;
+    margin-top: 7px;
+}

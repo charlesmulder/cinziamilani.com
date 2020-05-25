@@ -1,0 +1,45 @@
+@import "volume";
+
+html {
+    overflow:hidden;
+}
+
+body {
+    header > h1, 
+    header > object,
+    div.photo-grid,
+    {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+}
+
+div.photo-grid {
+    max-width: 1440px;
+    margin: auto;
+
+    img {
+        padding: 2px;
+    }
+
+}
+
+#loader {
+    margin-top:15%;
+    transition: opacity 1s;
+}
+
+#loader {
+    img {
+        max-width: 50px;
+        position: relative;
+        left:-7px;
+        bottom: -15px;
+    }
+}
+
+main.w3-content {
+    max-width: 1500px;
+    margin-top: 0;
+}
+

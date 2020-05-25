@@ -1,0 +1,68 @@
+---
+layout: common.hbs
+title: Buy classical guitar music CD's performed by Cinzia Milani
+styling: music.css
+---
+
+{{#each cd}}
+    {{#ifEven @index}}
+        <div class="w3-cell-row">
+    {{/ifEven}}
+    <div class="w3-container w3-cell w3-cell-middle w3-mobile">
+        <img src="{{ this.cover }}" alt="Front cover of CD release entitled '{{ this.title }}' performed by Cinzia Milani" title="'{{ this.title }}' performed by Cinzia Milani" class="w3-image"/>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="info@cinziamilani.com">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="{{ title }}">
+            <input type="hidden" name="button_subtype" value="services">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="currency_code" value="EUR">
+            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+            <input type="hidden" name="option_select0" value="Europe">
+            <input type="hidden" name="option_amount0" value="15.00">
+            <input type="hidden" name="option_select1" value="Rest of World">
+            <input type="hidden" name="option_amount1" value="17.00">
+            <input type="hidden" name="option_index" value="0">
+            <select name="os0" class="w3-select cm-margin-top">
+                <option value="Europe">Europe €15.00 EUR</option>
+                <option value="Rest of World">Rest of World €17.00 EUR</option>
+            </select>
+            <br>
+            <div class="cm-margin-top w3-margin-bottom">
+
+                <button class="w3-btn w3-round w3-blue"><i class="fab fa-paypal"></i>&nbsp;&nbsp;Order CD</button>
+                <!--<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-large.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">-->
+                {{#if this.spotify }}
+                    <!-- trigger/open the modal -->
+                    <button onclick="handleModalOpen(event, '{{ this.id }}')" class="w3-btn w3-round w3-green"><i class="fab fa-spotify"></i>&nbsp;&nbsp;Play Album</button>
+
+                    <!-- The Modal -->
+                    <div id="{{ this.id }}" class="w3-modal">
+                        <div class="w3-modal-content">
+                            <div class="w3-container">
+                                <span onclick="handleModalClose(event, '{{ this.id }}')" class="w3-button w3-display-topright w3-white">Close &times;</span>
+                                <iframe src="{{ this.spotify }}" width="900" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                {{/if}}
+            </div>
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+    {{#ifOdd @index}}
+        </div>
+    {{/ifOdd}}
+{{/each}}
+
+    <script>
+        function handleModalOpen(e, id) {
+            e.preventDefault();
+            document.getElementById(id).style.display='block';
+        }
+        function handleModalClose(e, id) {
+            document.getElementById(id).style.display='none';
+        }
+    </script>
+
