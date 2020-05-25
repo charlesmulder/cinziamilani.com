@@ -1,0 +1,34 @@
+{
+  "src": [
+    "guitar.ogg",
+    "guitar.m4a",
+    "guitar.mp3",
+    "guitar.ac3"
+  ],
+  "sprite": {
+    "182942__quartertone__gtrclass-00f-3s-55-v03": [
+      0,
+      3125.0113378684805
+    ],
+    "182946__quartertone__gtrclass-00f-4s-50-v02": [
+      5000,
+      5208.344671201814
+    ],
+    "182966__quartertone__gtrclass-00f-5s-45-v04": [
+      12000,
+      5208.344671201814
+    ],
+    "182967__quartertone__gtrclass-00f-6s-40-v02": [
+      19000,
+      5208.344671201814
+    ],
+    "183004__quartertone__gtrclass-00f-1s-64-v01": [
+      26000,
+      3125.0113378684787
+    ],
+    "183006__quartertone__gtrclass-00f-2s-59-v02": [
+      31000,
+      3125.0113378684787
+    ]
+  }
+}

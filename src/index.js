@@ -38,9 +38,9 @@ function loadImages(allImagesLoadedCallback) {
     }
 
     const photos = [
-        ["img/home/ISP4720.jpg", "img/home/IMG_4102.jpg", "img/home/IMG_0951.jpg"], // first photos of each column aka first row
-        ["img/home/ISP4053.jpg", "img/home/IMG_7178.jpg", "img/home/IMG_9940.jpg"],  // 2nd photos of each column aka second row
-        ["img/home/PA040526.jpg", "img/home/DSC00039.jpg", "img/home/IMG_5026.jpg"], // 3rd photo of each column aka third row
+        ["img/home/_ISP4720.jpg", "img/home/IMG_4012.jpg", "img/home/IMG_0951.jpg"], // first photos of each column aka first row
+        ["img/home/_ISP4053.jpg", "img/home/IMG_7178.jpg", "img/home/IMG_9940.jpg"],  // 2nd photos of each column aka second row
+        ["img/home/PA040526.jpg", "img/home/DSC00039.jpg", "img/home/IMG_5026.jpg"] // 3rd photo of each column aka third row
     ]
 
     let rowsLoaded = 0;
@@ -55,12 +55,16 @@ function loadImages(allImagesLoadedCallback) {
         row = row.filter(Boolean);
         let photosInRow = row.length;
         let photosLoaded = 0;
+
         row.forEach((src, index) => {
             let col = getColumn(rowsLoaded, index);
             let img = getPhoto(src);
+            console.log(`col ${col}`);
+            console.log(`img ${img}`);
             img.addEventListener('load', (e) => {
                 e.target.style.opacity = 1;
                 photosLoaded++;
+                console.log(`photos loaded: ${photosLoaded}`);
                 if(photosLoaded == photosInRow) {
                     rowsLoaded++;
                     loadRow(photos[rowsLoaded], rowsLoaded, totalRows, allImagesLoadedcallback);
@@ -182,7 +186,7 @@ function showNav(callback) {
 
 function enableGuitarStrings(guitar) {
     let height = getBodyHeight();
-    let stringHeight = height/9;
+    let stringHeight = height/10;
     var controller = new ScrollMagic.Controller();
     var stringPosition = 1;
     var strings = [];
@@ -222,12 +226,12 @@ function loadAudio(callback) {
                 5208.344671201814
             ],
             1: [
-                36000,
+                12000,
                 5208.344671201814
             ],
             2: [
-                43000,
-                4166.666666666664
+                5000,
+                5208.344671201814
             ],
             3: [
                 0,
@@ -282,6 +286,7 @@ function showSignature(callback) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
+
     
     if(window.location.pathname === '/') {
         setLoadingMsg('loading images...');
@@ -290,12 +295,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
             loadAudio((guitar) => {
                 window.guitar = guitar;
                 removeLoader(() => {
-                    //showNav(showPhotoGrid(showNote("Click the unmute icon below to play guitar.")));
-                    showSignature(() => {});
-                    new Vivus('signature', {duration: 200, type: 'oneByOne'}, () => {
-                        activateAudio();
-                        showFullname(showNav(showPhotoGrid(showNote("Unmute the guitar below."))));
-                    });
+                    activateAudio();
+                    showNav(showPhotoGrid(showNote("Unmute the guitar below.")));
+                    //showSignature(() => {});
+                    //new Vivus('signature', {duration: 200, type: 'oneByOne'}, () => {
+                    //    activateAudio();
+                    //    showFullname(showNav(showPhotoGrid(showNote("Unmute the guitar below."))));
+                    //});
                 });
             });
         });

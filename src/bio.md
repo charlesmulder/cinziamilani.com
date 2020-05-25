@@ -4,7 +4,7 @@ title: Biography of Cinzia Milani
 styling: bio.css
 ---
 
-<img src="/img/cinzia-milani.jpg" alt="Cinzia Milani smiling with guitar slung over shoulder" class="w3-image w3-left" style="padding: 0 15px 15px 15px"/>
+<img src="/img/bio/cinzia-milani.jpg" alt="Cinzia Milani smiling with guitar slung over shoulder" class="w3-image w3-left" style="padding: 0 15px 15px 15px"/>
 
 Cinzia Milani began studying classical guitar at a very young age and after private studies, graduated from the Conservatorio ‘A Boito’ in Parma at the age of 18.
  
