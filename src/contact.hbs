@@ -4,7 +4,7 @@ styling: contact.css
 title: Contact Cinzia Milani
 ---
 
-<form id="contact_form" action="http://localhost:8082" method="POST" class="w3-container">
+<form id="contact_form" action="{{ this.form.action }}" method="POST" class="w3-container">
     <label for="contact_name">Name: </label><br>
     <input type="text" id="contact_name" name="name" placeholder="your name" class="w3-input" required /><br>
     <label for="contact_email">Email:</label><br>
@@ -13,7 +13,7 @@ title: Contact Cinzia Milani
     <input type="text" id="contact_subject" name="subject" placeholder="subject of your message" class="w3-input" required /><br>
     <label for="contact_message">Message</label><br>
     <textarea id="contact_message" name="message" class="w3-input" required ></textarea><br>
-    <div class="h-captcha" data-sitekey="{{ this.captcha.key }}"></div><br>
+    <div class="h-captcha" data-sitekey="{{ this.form.captcha.key }}"></div><br>
     <div id="contact_notify"></div>
     <input type="submit" id="contact_submit" name="submit" value="Send" class="w3-cyan w3-btn w3-ripple w3-round" />
 </form>
