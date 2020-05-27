@@ -38,8 +38,8 @@ function loadImages(allImagesLoadedCallback) {
     }
 
     const photos = [
-        ["img/home/_ISP4720.jpg", "img/home/IMG_4012.jpg", "img/home/IMG_0951.jpg"], // first photos of each column aka first row
-        ["img/home/_ISP4053.jpg", "img/home/IMG_7178.jpg", "img/home/IMG_9940.jpg"],  // 2nd photos of each column aka second row
+        ["img/home/ISP4720.jpg", "img/home/IMG_4012.jpg", "img/home/IMG_0951.jpg"], // first photos of each column aka first row
+        ["img/home/ISP4053.jpg", "img/home/IMG_7178.jpg", "img/home/IMG_9940.jpg"],  // 2nd photos of each column aka second row
         ["img/home/PA040526.jpg", "img/home/DSC00039.jpg", "img/home/IMG_5026.jpg"] // 3rd photo of each column aka third row
     ]
 
