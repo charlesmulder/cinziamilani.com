@@ -1,0 +1,3 @@
+[submodule "mail"]
+	path = mail
+	url = git@github.com:charlesmulder/contact.cinziamilani.com.git
