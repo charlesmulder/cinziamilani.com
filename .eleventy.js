@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("img");
     eleventyConfig.addPassthroughCopy("audio");
     eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy("mail");
 
     // Handlebars Helper
     eleventyConfig.addPairedHandlebarsShortcode("ifEven", function(content, index) {
