@@ -1,0 +1,51 @@
+;;
+;; Domain:     cinziamilani.com.
+;; Exported:   2020-05-27 18:49:18
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+cinziamilani.com.	3600	IN	SOA	cinziamilani.com. root.cinziamilani.com. 2034227195 7200 3600 86400 3600
+
+;; A Records
+cinziamilani.com.	1	IN	A	81.88.48.113
+to-linux.cinziamilani.com.	1	IN	A	195.110.124.188
+to-windows.cinziamilani.com.	1	IN	A	81.88.48.113
+
+;; CNAME Records
+authsmtp.cinziamilani.com.	1	IN	CNAME	authsmtp.register.it.
+autoconfig.cinziamilani.com.	1	IN	CNAME	tb-it.securemail.pro.
+ftp.cinziamilani.com.	1	IN	CNAME	cinziamilani.com.
+pim.cinziamilani.com.	1	IN	CNAME	pim.register.it.
+pop.cinziamilani.com.	1	IN	CNAME	mail.register.it.
+webmail.cinziamilani.com.	1	IN	CNAME	webmail.register.it.
+www.cinziamilani.com.	1	IN	CNAME	cinziamilani.com.
+
+;; MX Records
+cinziamilani.com.	1	IN	MX	10 mail.register.it.
+pec.cinziamilani.com.	1	IN	MX	10 server.pec-email.com.
+
+;; SRV Records
+_autodiscover._tcp.cinziamilani.com.	1	IN	SRV	10 10 443 ms-it.securemail.pro.
+
+;; TXT Records
+cinziamilani.com.	1	IN	TXT	"v=spf1 mx include:spf.webapps.net include:send.register.it include:send2.register.it ~all"
