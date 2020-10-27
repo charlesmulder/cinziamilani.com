@@ -1,0 +1,22 @@
+---
+layout: common.hbs
+styling: contact.css
+title: Contact Cinzia Milani
+---
+{{{ content }}}
+<form action="{{ this.form.action }}" method="POST" class="w3-container">
+    <input type="hidden" name="recipient" value="{{ this.form.to }}">
+    <input type="hidden" name="required" value="realname,email,subject,messaggio">
+    <input type="hidden" name="redirect" value="/thankyou">
+    <input type="hidden" name="missing_fields_redirect" value="/error">
+    <label for="contact_name">Name: </label><br>
+    <input type="text" name="realname" placeholder="your name" class="w3-input" required /><br>
+    <label for="contact_email">Email:</label><br>
+    <input type="email" name="email" placeholder="an email address where I can reach you" class="w3-input" required /><br>
+    <label for="contact_subject">Subject</label><br>
+    <input type="text" name="subject" placeholder="subject of your message" class="w3-input" required /><br>
+    <label for="contact_message">Message</label><br>
+    <textarea name="messaggio" class="w3-input" required ></textarea><br>
+    <input type="submit" name="submit" value="Send" class="w3-cyan w3-btn w3-ripple w3-round" />
+</form>
+<script src="https://hcaptcha.com/1/api.js" async defer></script>

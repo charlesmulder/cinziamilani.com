@@ -1,6 +1,8 @@
 {
     "form": {
-        "action": "https://cinziamilani.com/mail",
+        "to": "info@cinziamilani.com",
+        "subject": "New message from the website!",
+        "action": "/cgi-bin/FormMail.pl",
         "captcha": {
             "key": "790f237d-7ab7-4e17-9bb0-daca6f83e162"
         }

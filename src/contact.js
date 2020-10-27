@@ -1,3 +1,4 @@
+/*
 const contactForm = document.getElementById("contact_form");
 
 function alert(color, msg) {
@@ -31,7 +32,7 @@ if(contactForm) {
 
         // Display the key/value pairs
         const formData = formToJSON(e.target.elements);
-        let res = await fetch("https://contact.cinziamilani.com", {
+        let res = await fetch("https://cinziamilani.com/mail", {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -57,4 +58,4 @@ if(contactForm) {
 
 
 }
-
+*/
