@@ -19,7 +19,7 @@
     "@11ty/eleventy": "^0.11.0",
     "audiosprite": "^0.7.2",
     "http-proxy": "^1.18.1",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "sass": "^1.26.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
