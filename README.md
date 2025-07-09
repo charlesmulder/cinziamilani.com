@@ -1,5 +1,9 @@
 # cinziamilani.com
 
+```sh
+docker run -ti p 8080:8080 -u node:node -w /usr/local/src -v .:/usr/local/src node:22.17 bash
+```
+
 ```bash
 npm install
 ```
